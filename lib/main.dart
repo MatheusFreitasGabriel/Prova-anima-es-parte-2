@@ -1,3 +1,17 @@
+import 'package:flutter/material.dart';
+import 'package:provaanimations/boasvindas_screen.dart';
+
 void main(){
-  runApp
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      home: BoasvindasScreen(),
+    );
+  }
 }
