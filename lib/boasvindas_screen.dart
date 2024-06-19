@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provaanimations/principal_screen.dart';
 
 class BoasvindasScreen extends StatefulWidget {
   const BoasvindasScreen({super.key});
@@ -57,7 +58,9 @@ class _BoasvindasScreenState extends State<BoasvindasScreen> {
                     foregroundColor: Colors.white,
                     padding: EdgeInsets.symmetric(horizontal: 96, vertical: 16),
                   ),
-                    onPressed: (){},
+                    onPressed: (){
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => PrincipalScreen()));
+                    },
                     child: Text(
                   "Começar",
                   style: GoogleFonts.poppins(
