@@ -14,8 +14,10 @@ class _BoasvindasScreenState extends State<BoasvindasScreen> {
   double _opacity = 0;
 
   void _startOpacity(){
-    setState(() {
-      _opacity = 1;
+    WidgetsBinding.instance.addPostFrameCallback((_){
+      setState(() {
+        _opacity = 1;
+      });
     });
   }
 
