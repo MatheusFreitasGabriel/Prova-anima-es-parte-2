@@ -33,22 +33,17 @@ class _BoasvindasScreenState extends State<BoasvindasScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               AnimatedOpacity(
                 opacity: _opacity,
                 duration: Duration(seconds: 2),
                 curve: Curves.easeIn,
-                child: Container(
-                  height: 100,
-                  width: double.infinity,
-                  child: Column(
-                    children: [
-                      Text("Seja bem vindo!!", style: GoogleFonts.poppins(fontSize: 24, fontWeight: FontWeight.bold),),
-                      Text("Aproveite da melhor experiencia possivel", style: GoogleFonts.poppins(
-                        fontSize: 12,
-                        color: Colors.grey,
-                      )),
-                    ],
+                child: Text(
+                  "Seja bem vindo!",
+                  style: GoogleFonts.poppins(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
@@ -56,13 +51,21 @@ class _BoasvindasScreenState extends State<BoasvindasScreen> {
               AnimatedOpacity(
                 opacity: _opacity,
                 duration: Duration(seconds: 2),
-                child: ElevatedButton(onPressed: (){}, child: Text(
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red,
+                    foregroundColor: Colors.white,
+                    padding: EdgeInsets.symmetric(horizontal: 96, vertical: 16),
+                  ),
+                    onPressed: (){},
+                    child: Text(
                   "Começar",
                   style: GoogleFonts.poppins(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                   ),
+
                 )),
               )
             ],
