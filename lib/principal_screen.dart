@@ -11,34 +11,35 @@ class PrincipalScreen extends StatefulWidget {
 }
 
 class _PrincipalScreenState extends State<PrincipalScreen> {
+  int _index = 0;
+
   @override
   Widget build(BuildContext context) {
-    int _index = 0;
     List<Widget> _body = [
       PerfilScreen(),
       ExercicioScreen(),
       MetasScreen(),
-
     ];
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.red,
-        onTap: (int index){
+        currentIndex: _index,
+        onTap: (int index) {
           setState(() {
             _index = index;
           });
         },
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.person, color: Colors.white,),
+            icon: Icon(Icons.person, color: Colors.white),
             label: "Perfil",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.fitness_center, color: Colors.white,),
+            icon: Icon(Icons.fitness_center, color: Colors.white),
             label: "Exercicios",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.calendar_month_sharp, color: Colors.white,),
+            icon: Icon(Icons.calendar_month_sharp, color: Colors.white),
             label: "Metas",
           ),
         ],
