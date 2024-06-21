@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provaanimations/principal_screen.dart';
+import 'package:flutter/animation.dart';
 
 class BoasvindasScreen extends StatefulWidget {
   const BoasvindasScreen({super.key});
